@@ -3,10 +3,10 @@ import java.util.List;
 
 public class Main {
     public static void main(String[] args) throws IOException {
-        List<String> names = FileReaderUtil.readNames("female_names.txt");
+        List<String> names = FileReaderUtil.readNames("/home/bryan/IdeaProjects/Tabela Hash/src/female_names.txt");
 
-        HashTable table1 = new HashTableHash1();
-        HashTable table2 = new HashTableHash2();
+        HashTable table1 = new HashTable1();
+        HashTable table2 = new HashTable2();
 
         long start1 = System.nanoTime();
         for (String name : names) table1.insert(name);
