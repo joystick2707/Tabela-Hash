@@ -1,4 +1,4 @@
-public class HashTableHash2 extends HashTable {
+public class HashTable2 extends HashTable {
     @Override
     protected int hash(String key) {
         int hash = 0;
