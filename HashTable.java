@@ -1,63 +1,39 @@
+// HashTable.java
 public abstract class HashTable {
     protected int size = 32;
-    protected Node[] table;
-    protected int collisions = 0;
+    protected MyLinkedList[] tabela;
+    protected int colisoes = 0;
 
     public HashTable() {
-        table = new Node[size];
-    }
-
-    protected abstract int hash(String key);
-
-    public void insert(String key) {
-        int index = hash(key);
-        if (table[index] == null) {
-            table[index] = new Node(key);
-        } else {
-            collisions++;
-            Node current = table[index];
-            while (current.next != null) {
-                current = current.next;
-            }
-            current.next = new Node(key);
+        tabela = new MyLinkedList[size];
+        for (int i = 0; i < size; i++) {
+            tabela[i] = new MyLinkedList();
         }
     }
 
-    public boolean search(String key) {
-        int index = hash(key);
-        Node current = table[index];
-        while (current != null) {
-            if (current.key.equals(key)) {
-                return true;
-            }
-            current = current.next;
+    protected abstract int hash(String chave);
+
+    public void insert(String chave) {
+        int indice = hash(chave);
+        if (!tabela[indice].isEmpty()) {
+            colisoes++;
         }
-        return false;
+        tabela[indice].insert(chave);
+    }
+
+    public boolean search(String chave) {
+        int indice = hash(chave);
+        return tabela[indice].search(chave);
     }
 
     public int getCollisions() {
-        return collisions;
+        return colisoes;
     }
 
     public void printDistribution() {
         for (int i = 0; i < size; i++) {
-            int count = 0;
-            Node current = table[i];
-            while (current != null) {
-                count++;
-                current = current.next;
-            }
-            System.out.println("Posicao " + i + ": " + count + " elemento(s)");
-        }
-    }
-
-    static class Node {
-        String key;
-        Node next;
-
-        Node(String key) {
-            this.key = key;
-            this.next = null;
+            int quantidade = tabela[i].countElements();
+            System.out.println("Posicao " + i + ": " + quantidade + " elemento(s)");
         }
     }
 }
