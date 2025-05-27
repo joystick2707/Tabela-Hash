@@ -11,6 +11,7 @@ public class HashTable1 extends HashTable {
             hash = primo * hash + key.charAt(i); // Acumula o valor usando multiplicação e adição
         }
 
+        // Garante que o valor do hash seja positivo e dentro do tamanho da tabela (size)
         return Math.abs(hash) % size;
     }
 }
