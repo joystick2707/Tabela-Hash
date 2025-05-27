@@ -1,6 +1,6 @@
 public class MyArrayList<T> {
-    private Object[] elementos;
-    private int tamanho = 0;
+    private Object[] elementos; // Array que armazena os elementos
+    private int tamanho = 0; // Contador para o número de elementos efetivamente armazenados
 
     public MyArrayList(int capacidadeInicial) {
         elementos = new Object[capacidadeInicial];
