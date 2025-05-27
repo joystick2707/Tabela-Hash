@@ -13,7 +13,7 @@ public class MyLinkedList {
             while (current.next != null) {
                 current = current.next;
             }
-            current.next = new Node(key);
+            current.next = new Node(key); // Adiciona o novo nó ao final da lista
         }
     }
 
