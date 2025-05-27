@@ -10,6 +10,8 @@ public class FileReaderUtil {
         String line;
         while ((line = reader.readLine()) != null) {
             names.adicionar(line.trim());
+               // Remove espaços em branco no início/fim da linha e adiciona à lista.
+            // Supõe que "adicionar" seja o método equivalente a "add" da lista padrão.
         }
         reader.close();
         return names;
