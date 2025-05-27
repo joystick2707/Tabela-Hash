@@ -2,6 +2,7 @@ import java.io.IOException;
 
 public class Main {
     public static void main(String[] args) throws IOException {
+        // Lê os nomes de um arquivo e armazena em uma lista personalizada do tipo MyArrayList
         MyArrayList<String> names = FileReaderUtil.readNames("/home/bryan/IdeaProjects/Tabela Hash/src/female_names.txt");
 
         HashTable table1 = new HashTable1();
