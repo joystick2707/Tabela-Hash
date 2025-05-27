@@ -9,7 +9,9 @@ public class HashTable2 extends HashTable {
             // Atualiza o hash aplicando a operação: hash * 33 XOR caractere
             hash = ((hash << 5) + hash) ^ key.charAt(i);
         }
-
+        
+// Garante que o valor do hash seja positivo e ajustado ao tamanho da tabela
+        // 'size' é presumivelmente definido na classe pai HashTable
         return Math.abs(hash) % size;
     }
 }
