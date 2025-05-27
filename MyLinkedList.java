@@ -32,7 +32,7 @@ public class MyLinkedList {
         int count = 0;
         Node current = head;
         while (current != null) {
-            count++;
+            count++; // Conta cada nó
             current = current.next;
         }
         return count;
