@@ -25,6 +25,7 @@ public abstract class HashTable {
         tabela[indice].insert(chave); // Insere a chave na lista correspondente
     }
 
+    // Método para buscar uma chave na tabela hash
     public boolean search(String chave) {
         int indice = hash(chave); 
         return tabela[indice].search(chave); // Busca a chave na lista correspondente
