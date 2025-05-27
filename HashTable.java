@@ -35,7 +35,7 @@ public abstract class HashTable {
         return colisoes;
     }
 
-    // Imprime a distribuição de elementos nas posições da tabela
+  // Imprime a distribuição dos elementos nas posições da tabela hash
     public void printDistribution() {
         for (int i = 0; i < size; i++) {
             int quantidade = tabela[i].countElements(); // Conta os elementos na lista da posição i
