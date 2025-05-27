@@ -1,13 +1,16 @@
-// HashTableHash1.java
 public class HashTable1 extends HashTable {
+
+    // função de hash com número primo
     @Override
     protected int hash(String key) {
         int hash = 0;
-        int prime = 31; // número primo comum usado em funções de hash
+        int primo = 31; 
+
+        // Calcula o valor hash somando os códigos dos caracteres da chave multiplicados pelo primo
         for (int i = 0; i < key.length(); i++) {
-            hash = prime * hash + key.charAt(i);
+            hash = primo * hash + key.charAt(i); // Acumula o valor usando multiplicação e adição
         }
-        // Evita números negativos e garante que o hash esteja dentro dos limites da tabela
+
         return Math.abs(hash) % size;
     }
 }
