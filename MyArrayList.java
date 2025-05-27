@@ -8,6 +8,7 @@ public class MyArrayList<T> {
 
     public void adicionar(T elemento) {
         if (tamanho == elementos.length) {
+            // Se o array estiver cheio, dobra o tamanho do array
             Object[] novoArray = new Object[elementos.length * 2];
             for (int i = 0; i < elementos.length; i++) {
                 novoArray[i] = elementos[i];
