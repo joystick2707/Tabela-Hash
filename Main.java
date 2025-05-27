@@ -5,8 +5,9 @@ public class Main {
         // Lê os nomes de um arquivo e armazena em uma lista personalizada do tipo MyArrayList
         MyArrayList<String> names = FileReaderUtil.readNames("/home/bryan/IdeaProjects/Tabela Hash/src/female_names.txt");
 
-        HashTable table1 = new HashTable1();
-        HashTable table2 = new HashTable2();
+        // Cria duas tabelas hash diferentes para fins de comparação
+        HashTable table1 = new HashTable1(); // Primeira implementação de tabela hash
+        HashTable table2 = new HashTable2(); // Segunda implementação de tabela hash
 
         long start1 = System.nanoTime();
         for (int i = 0; i < names.tamanho(); i++) {
