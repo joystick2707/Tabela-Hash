@@ -21,11 +21,13 @@ public class Main {
         }
         long end2 = System.nanoTime();
 
+          // Exibe os resultados da tabela 1
         System.out.println("--- Hash 1 ---");
         System.out.println("Colisões: " + table1.getCollisions());
         System.out.println("Tempo de inserção: " + (end1 - start1) + " ns");
         table1.printDistribution();
 
+        // Exibe os resultados da tabela 2
         System.out.println("\n--- Hash 2 ---");
         System.out.println("Colisões: " + table2.getCollisions());
         System.out.println("Tempo de inserção: " + (end2 - start2) + " ns");
