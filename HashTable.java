@@ -13,7 +13,7 @@ public abstract class HashTable {
         }
     }
 
-    // Método para definir a função de hash
+    // Método abstrato que deve ser implementado nas subclasses para definir a função de hash
     protected abstract int hash(String chave);
 
     // Insere uma chave na tabela hash
