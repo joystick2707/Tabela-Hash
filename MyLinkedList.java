@@ -1,5 +1,5 @@
 public class MyLinkedList {
-    private Node head;
+    private Node head; // Referência para o primeiro nó da lista
 
     public MyLinkedList() {
         this.head = null;
